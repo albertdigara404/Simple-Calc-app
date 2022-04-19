@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:hint="0"
+            android:textSize="40sp"
+            android:maxLength="14"
+            android:padding="15dp"
+            android:gravity="right|center_vertical|bottom"
+            />
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numSeven"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:layout_weight="1"
+                android:onClick="getNumber"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numEight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:layout_weight="1"
+                android:onClick="getNumber"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numNine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:layout_weight="1"
+                android:onClick="getNumber"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="operatorChecker"
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numFour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="4"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numFive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="5"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numSix"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="6"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="operatorChecker"
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="-"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numOne"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numThree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="3"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="operatorChecker"
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="*"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="getNumber"
+            android:id="@+id/numZero"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:layout_weight="2"
+            />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="operatorChecker"
+                android:id="@+id/btnModulo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="%"
+                android:layout_weight="1"
+                />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="operatorChecker"
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="/"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="calculateResults"
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="="
+            android:layout_weight="2"
+            />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDecimalPoint"
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="."
+            android:layout_weight="1"
+            />
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="clearNumber"
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="CLR"
+                android:layout_weight="1"
+                />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
